@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salon Booking</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0; /* Example background color */
+        }
+        nav {
+            background-color: #333; /* Example navbar color */
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed; /* Fixed footer */
+            bottom: 0;
+            width: 100%;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/book/">Book Now</a>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        &copy; 2023 Salon Name
+    </footer>
+</body>
+</html>

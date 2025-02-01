@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book an Appointment</title>
+    <style>
+        /* Basic styling - customize as needed */
+        body {
+            font-family: sans-serif;
+        }
+        form label {
+            display: block; /* Labels on separate lines */
+            margin-bottom: 5px;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box; /* Prevent padding from increasing width */
+        }
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book an Appointment</h1>
+
+    <form method="post">
+        {% csrf_token %}  {{ form.as_p }} <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
